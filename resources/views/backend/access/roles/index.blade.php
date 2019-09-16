@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.roles.management'))
 
@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.roles.management') }}</h3>
 
@@ -18,7 +18,7 @@
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="roles-table" class="table table-condensed table-hover table-bordered">
+                <table id="roles-table" class="w-100 table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.access.roles.table.role') }}</th>
@@ -51,17 +51,7 @@
         </div><!-- /.box-body -->
     </div><!--box-->
 
-    <!--<div class="box box-info">
-        <div class="box-header with-border">
-            <h3 class="box-title">{{ trans('history.backend.recent_history') }}</h3>
-            <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            </div><!-- /.box tools -->
-        </div><!-- /.box-header --> -->
-        <div class="box-body">
-            {{-- {!! history()->renderType('Role') !!} --}}
-        </div><!-- /.box-body -->
-    </div><!--box box-info-->
+
 @endsection
 
 @section('after-scripts')

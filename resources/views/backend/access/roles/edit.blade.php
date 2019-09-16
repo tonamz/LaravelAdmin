@@ -1,6 +1,15 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.roles.management') . ' | ' . trans('labels.backend.access.roles.edit'))
+@section('css')
+        <!-- Plugins css -->
+        <link href="{{ URL::asset('assets/libs/jquery-nice-select/jquery-nice-select.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/libs/switchery/switchery.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/libs/multiselect/multiselect.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/libs/select2/select2.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/libs/bootstrap-select/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/libs/bootstrap-touchspin/bootstrap-touchspin.min.css')}}" rel="stylesheet" type="text/css" />
+@endsection
 
 @section('page-header')
     <h1>
@@ -12,8 +21,8 @@
 @section('content')
     {{ Form::model($role, ['route' => ['admin.access.role.update', $role], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role']) }}
 
-        <div class="box box-info">
-            <div class="box-header with-border">
+        <div class="card box box-info">
+            <div class="box-header with-border ml-3">
                 <h3 class="box-title">{{ trans('labels.backend.access.roles.edit') }}</h3>
 
                 <div class="box-tools pull-right">
@@ -25,7 +34,7 @@
                 <div class="form-group">
                     {{ Form::label('name', trans('validation.attributes.backend.access.roles.name'), ['class' => 'col-lg-2 control-label required']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.roles.name'), 'required' => 'required']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -33,10 +42,10 @@
                 <div class="form-group">
                     {{ Form::label('associated_permissions', trans('validation.attributes.backend.access.roles.associated_permissions'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::select('associated_permissions', ['all' => 'All', 'custom' => 'Custom'], $role->all ? 'all' : 'custom', ['class' => 'form-control select2 box-size']) }}
 
-                        <div id="available-permissions" class="hidden mt-20" style="width: 700px; height: 200px; overflow-x: hidden; overflow-y: scroll;">
+                        <div id="available-permissions" class="hidden mt-20" style="width: auto; height: 200px; overflow-x: hidden; overflow-y: scroll; padding: 10px 0px 0px 30px;">
                             <div class="row">
                                 <div class="col-xs-12">
                                     @if ($permissions->count())
@@ -59,13 +68,13 @@
                 <div class="form-group">
                     {{ Form::label('sort', trans('validation.attributes.backend.access.roles.sort'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('sort', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.roles.sort')]) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
-                <div class="edit-form-btn">
+                <div class="edit-form-btn mb-2" align="center">
                     {{ link_to_route('admin.access.role.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div><!-- /.box-body -->
