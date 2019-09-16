@@ -79,12 +79,12 @@
 
                     <div class="col-lg-12">
                         <div class="control-group">
-                        <div class="checkbox checkbox-info mb-2">
-                            <input  checked="checked" id="checkbox4" type="checkbox" id="status" name="status" value="1">
-                            <label for="checkbox4">
-                                    Active
-                             </label>
-                        </div> 
+                            <div class="checkbox checkbox-info mb-2">
+                                <input  checked="checked" id="checkbox4" type="checkbox" id="status" name="status" value="1">
+                                <label for="checkbox4">
+                                        Active
+                                </label>
+                            </div> 
                         </div>  
                     </div><!--col-lg-3-->
                 </div><!--form control-->

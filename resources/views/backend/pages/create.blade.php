@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.pages.management') . ' | ' . trans('labels.backend.pages.create'))
 
@@ -12,9 +12,9 @@
 @section('content')
     {{ Form::open(['route' => 'admin.pages.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-permission']) }}
 
-        <div class="box box-info">
+        <div class="card box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('labels.backend.pages.create') }}</h3>
+                <h3 class="box-title ml-3">{{ trans('labels.backend.pages.create') }}</h3>
 
                 <div class="box-tools pull-right">
                     @include('backend.pages.partials.pages-header-buttons')
@@ -71,15 +71,13 @@
                 </div><!--form control-->
 
                 <div class="form-group">
-                    {{ Form::label('status', trans('validation.attributes.backend.pages.is_active'), ['class' => 'col-lg-2 control-label']) }}
-
                     <div class="col-lg-10">
-                        <div class="control-group">
-                            <label class="control control--checkbox">
-                                {{ Form::checkbox('status', 1, true) }}
-                                <div class="control__indicator"></div>
-                            </label>
-                        </div>
+                        <div class="checkbox checkbox-info mb-2">
+                                    <input  checked="checked" id="checkbox4" type="checkbox" id="status" name="status" value="1">
+                                    <label for="checkbox4">
+                                            Active
+                                    </label>
+                        </div> 
                     </div><!--col-lg-3-->
                 </div><!--form control-->
                 <div class="edit-form-btn">
