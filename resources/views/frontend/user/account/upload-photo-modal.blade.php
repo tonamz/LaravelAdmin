@@ -33,8 +33,8 @@
         </div>
 
         <div class="form-group">
-          {!! Form::submit('Submit', ['class' => 'btn btn-primary']) !!}
-          {!! Form::reset('Reset', ['class' => 'btn btn-primary']) !!}
+          {!! Form::submit('Submit', ['class' => 'btn btn-blue']) !!}
+          {!! Form::reset('Reset', ['class' => 'btn btn-blue']) !!}
         </div>
           
         {!! Form::close() !!}

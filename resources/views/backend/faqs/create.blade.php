@@ -27,7 +27,7 @@
                     @include("backend.faqs.form")
                     <div class="edit-form-btn">
                     {{ link_to_route('admin.faqs.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-blue btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div>

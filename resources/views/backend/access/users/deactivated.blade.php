@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.users.management') . ' | ' . trans('labels.backend.access.users.deactivated'))
 
@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.users.deactivated') }}</h3>
 
@@ -21,7 +21,7 @@
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="users-table" class="table table-condensed table-hover table-bordered">
+                <table id="users-table" class="w-100 table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.access.users.table.first_name') }}</th>

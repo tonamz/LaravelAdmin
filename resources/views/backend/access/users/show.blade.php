@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.users.management') . ' | ' . trans('labels.backend.access.users.view'))
 
@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.users.view') }}</h3>
 
@@ -25,12 +25,12 @@
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">{{ trans('labels.backend.access.users.tabs.titles.overview') }}</a>
+                    <li role="presentation"  class="nav-item">
+                        <a class="nav-link active" href="#overview" aria-controls="overview" role="tab" data-toggle="tab">{{ trans('labels.backend.access.users.tabs.titles.overview') }}</a>
                     </li>
 
-                    <li role="presentation">
-                        <a href="#history" aria-controls="history" role="tab" data-toggle="tab">{{ trans('labels.backend.access.users.tabs.titles.history') }}</a>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="#history" aria-controls="history" role="tab" data-toggle="tab">{{ trans('labels.backend.access.users.tabs.titles.history') }}</a>
                     </li>
                 </ul>
 

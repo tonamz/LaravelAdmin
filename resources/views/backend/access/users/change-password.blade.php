@@ -50,7 +50,7 @@
                 </div><!--pull-left-->
 
                 <div class="pull-right">
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
                 </div><!--pull-right-->
 
                 <div class="clearfix"></div>

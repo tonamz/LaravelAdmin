@@ -14,7 +14,7 @@ trait RoleAttribute
     {
         if (access()->allow('edit-role')) {
             return '<a class="btn btn-flat btn-default" href="'.route('admin.access.role.edit', $this).'">
-                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fa fa-pencil"></i>
+                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-pencil-alt"></i>
                 </a>';
         }
     }

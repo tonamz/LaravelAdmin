@@ -228,7 +228,7 @@
 	<div class="box-footer">
 		<div class="row">
 			<div class="col-lg-offset-2 col-lg-10 footer-btn">
-				{{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+				{{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
 				<div class="clearfix"></div>
 			</div>
 		</div>

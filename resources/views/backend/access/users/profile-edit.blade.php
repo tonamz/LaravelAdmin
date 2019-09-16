@@ -32,7 +32,7 @@
 
             <div class="form-group">
                 <div class="col-lg-10 col-md-offset-4">
-                    {{ Form::submit(trans('labels.general.buttons.update'), ['class' => 'btn btn-primary', 'id' => 'update-profile']) }}
+                    {{ Form::submit(trans('labels.general.buttons.update'), ['class' => 'btn btn-blue', 'id' => 'update-profile']) }}
                 </div>
             </div>
         </div>

@@ -120,7 +120,7 @@ trait UserAttribute
     {
         if (access()->allow('edit-user')) {
             return '<a class="'.$class.'" href="'.route('admin.access.user.edit', $this).'">
-                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fa fa-pencil"></i>
+                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-pencil-alt"></i>
                 </a>';
         }
     }
@@ -132,7 +132,7 @@ trait UserAttribute
     {
         if (access()->user()->id == $this->id && access()->allow('edit-user')) {
             return '<a class="'.$class.'" href="'.route('admin.access.user.change-password', $this).'">
-                        <i class="fa fa-refresh" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.change_password').'">
+                        <i class="fe-refresh-ccw" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.change_password').'">
                         </i>
                     </a>';
         }
@@ -175,7 +175,7 @@ trait UserAttribute
     public function getConfirmedButtonAttribute($class)
     {
         if (!$this->isConfirmed() && access()->allow('edit-user')) {
-            return '<a class="'.$class.'" href="'.route('admin.access.user.account.confirm.resend', $this).'"><i class="fa fa-refresh" data-toggle="tooltip" data-placement="top" title='.trans('buttons.backend.access.users.resend_email').'"></i></a> ';
+            return '<a class="'.$class.'" href="'.route('admin.access.user.account.confirm.resend', $this).'"><i class="fe-refresh-ccw" data-toggle="tooltip" data-placement="top" title='.trans('buttons.backend.access.users.resend_email').'"></i></a> ';
         }
 
         return '';
@@ -205,7 +205,7 @@ trait UserAttribute
     public function getRestoreButtonAttribute($class)
     {
         if (access()->allow('delete-user')) {
-            return '<a class="'.$class.'" href="'.route('admin.access.user.restore', $this).'" name="restore_user"><i class="fa fa-refresh" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.restore_user').'"></i></a> ';
+            return '<a class="'.$class.'" href="'.route('admin.access.user.restore', $this).'" name="restore_user"><i class="fe-refresh-ccw" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.restore_user').'"></i></a> ';
         }
     }
 
@@ -265,7 +265,7 @@ trait UserAttribute
         if ($this->id != 1) {
             return '<div class="btn-group dropup">
                         <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-option-vertical"></span>
+                            <span class="fe-more-vertical"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-right">
                         <li>'.$this->getStatusButtonAttribute('').'</li>
@@ -436,7 +436,7 @@ trait UserAttribute
                         $actionButton = $actionButton.'
                             <div class="btn-group dropup">
                             <button type="button" class="btn btn-default btn-flat dropdown-toggle" data-toggle="dropdown">
-                                <span class="glyphicon glyphicon-option-vertical"></span>
+                                <span class="fe-more-vertical"></span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-right">';
                     }

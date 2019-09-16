@@ -43,7 +43,7 @@
             <div class="form-group">
                 <div class="edit-form-btn">
                   {{ Form::reset(trans('buttons.general.cancel'), ['class' => 'btn btn-default btn-md', 'data-dismiss' => 'modal']) }}
-                  {{ Form::submit(trans('buttons.general.save'), ['class' => 'btn btn-primary btn-md']) }}
+                  {{ Form::submit(trans('buttons.general.save'), ['class' => 'btn btn-blue btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div>

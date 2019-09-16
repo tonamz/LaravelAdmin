@@ -11,7 +11,7 @@ trait ModelTrait
     {
         if (access()->allow($permission)) {
             return '<a href="'.route($route, $this).'" class="btn btn-flat btn-default">
-                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fa fa-pencil"></i>
+                    <i data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-pencil-alt"></i>
                 </a>';
         }
     }

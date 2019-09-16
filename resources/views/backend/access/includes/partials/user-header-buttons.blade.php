@@ -4,7 +4,7 @@
     @endif
 <!--Action Button-->
 <div class="btn-group">
-  <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">@lang('menus.backend.access.users.action')
+  <button type="button" class="btn btn-blue btn-flat dropdown-toggle" data-toggle="dropdown">@lang('menus.backend.access.users.action')
     <span class="fas fa-caret-down"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>

@@ -27,7 +27,7 @@
                     @include("backend.homes.form")
                     <div class="edit-form-btn">
                         {{ link_to_route('admin.homes.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-primary btn-md']) }}
+                        {{ Form::submit(trans('buttons.general.crud.create'), ['class' => 'btn btn-blue btn-md']) }}
                         <div class="clearfix"></div>
                     </div><!--edit-form-btn-->
                 </div><!-- form-group -->

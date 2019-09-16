@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.users.management') . ' | ' . trans('labels.backend.access.users.edit'))
 
@@ -12,7 +12,9 @@
 @section('content')
     {{ Form::model($user, ['route' => ['admin.access.user.update', $user], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH']) }}
 
-        <div class="box box-info">
+
+    
+        <div class="card box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('labels.backend.access.users.edit') }}</h3>
 
@@ -20,7 +22,6 @@
                     @include('backend.access.includes.partials.user-header-buttons')
                 </div><!--box-tools pull-right-->
             </div><!-- /.box-header -->
-
             <div class="box-body">
                 {{-- First Name --}}
                 <div class="form-group">
@@ -51,12 +52,12 @@
 
                 {{-- Status --}}
                 @if ($user->id != 1)
-                    <div class="form-group">
+                    <div class="form-group row">
                         {{ Form::label('status', trans('validation.attributes.backend.access.users.active'), ['class' => 'col-lg-2 control-label']) }}
                         <div class="col-lg-1">
                                 <div class="control-group">
                                     <label class="control control--checkbox">
-                                         {{ Form::checkbox('status', '1', $user->status == 1) }}
+                                         <input checked="checked" name="status" type="checkbox" value="1"  >
                                     <div class="control__indicator"></div>
                                     </label>
                                 </div>
@@ -64,7 +65,7 @@
                     </div><!--form control-->
 
                     {{-- Confirmed --}}
-                    <div class="form-group">
+                    <div class="form-group row">
                         {{ Form::label('confirmed', trans('validation.attributes.backend.access.users.confirmed'), ['class' => 'col-lg-2 control-label']) }}
 
                         <div class="col-lg-1">
@@ -78,7 +79,7 @@
                     </div><!--form control-->
 
                     {{-- Associated Roles --}}
-                    <div class="form-group">
+                    <div class="form-group row">
                         {{ Form::label('status', trans('validation.attributes.backend.access.users.associated_roles'), ['class' => 'col-lg-2 control-label']) }}
 
                         <div class="col-lg-8">
@@ -120,7 +121,7 @@
                     </div><!--form control-->
 
                     {{-- Associated Permissions --}}
-                    <div class="form-group">
+                    <div class="form-group row">
                         {{ Form::label('associated-permissions', trans('validation.attributes.backend.access.roles.associated_permissions'), ['class' => 'col-lg-2 control-label']) }}
                         <div class="col-lg-10">
                             <div id="available-permissions" style="width: 700px; height: 200px; overflow-x: hidden; overflow-y: scroll;">
@@ -146,9 +147,9 @@
                     </div><!--form control-->
 
                 @endif
-                <div class="edit-form-btn">
+                <div class="edit-form-btn m-3" align="center">
                     {{ link_to_route('admin.access.user.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div><!-- /.box-body -->

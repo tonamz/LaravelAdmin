@@ -28,7 +28,7 @@
 
                 <div class="edit-form-btn">
                     {{ link_to_route('admin.access.permission.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div><!-- /.box-body -->

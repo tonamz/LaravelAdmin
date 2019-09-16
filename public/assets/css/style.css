@@ -436,3 +436,21 @@ a i{
   line-height: 20px;
 } */
 
+.data-table-wrapper div.dataTables_wrapper div.dataTables_processing {
+  background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 0;
+  z-index: 10;
+}
+div.dataTables_wrapper div.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -26px;
+  text-align: center;
+  padding: 1em 0;
+}
