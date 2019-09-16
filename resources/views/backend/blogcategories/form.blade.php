@@ -7,18 +7,14 @@
     </div><!--form control-->
 
     <div class="form-group">
-        {{ Form::label('status', trans('validation.attributes.backend.blogcategories.is_active'), ['class' => 'col-lg-2 control-label']) }}
-
         <div class="col-lg-10">
             <div class="control-group">
-                <label class="control control--checkbox">
-                        @if(isset($blogcategory->status) && !empty ($blogcategory->status))
-                            {{ Form::checkbox('status', 1, true) }}
-                        @else
-                            {{ Form::checkbox('status', 1, false) }}
-                        @endif
-                    <div class="control__indicator"></div>
-                </label>
+                <div class="checkbox checkbox-info mb-2">
+                    <input  checked="checked" id="checkbox4" type="checkbox" id="status" name="status" value="1">
+                     <label for="checkbox4">
+                        Active
+                    </label>
+                </div> 
             </div>
         </div><!--col-lg-3-->
     </div>
