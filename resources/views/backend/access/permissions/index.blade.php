@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.permissions.management'))
 
@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.permissions.management') }}</h3>
 
@@ -18,7 +18,7 @@
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="permissions-table" class="table table-condensed table-hover table-bordered">
+                <table id="permissions-table" class="w-100 table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.access.permissions.table.permission') }}</th>

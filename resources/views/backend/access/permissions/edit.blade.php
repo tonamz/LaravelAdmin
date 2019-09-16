@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.permissions.management') . ' | ' . trans('labels.backend.access.permissions.edit'))
 
@@ -12,7 +12,7 @@
 @section('content')
     {{ Form::model($permission, ['route' => ['admin.access.permission.update', $permission], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-role']) }}
 
-        <div class="box box-info">
+        <div class="card box box-info">
             <div class="box-header with-border">
                 <h3 class="box-title">{{ trans('labels.backend.access.permissions.edit') }}</h3>
 
@@ -26,9 +26,9 @@
                 {{-- Including Form --}}
                 @include("backend.access.permissions.form")
 
-                <div class="edit-form-btn">
+                <div class="edit-form-btn mb-2" align="center">
                     {{ link_to_route('admin.access.permission.index', trans('buttons.general.cancel'), [], ['class' => 'btn btn-danger btn-md']) }}
-                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-blue btn-md']) }}
+                    {{ Form::submit(trans('buttons.general.crud.update'), ['class' => 'btn btn-primary btn-md']) }}
                     <div class="clearfix"></div>
                 </div>
             </div><!-- /.box-body -->

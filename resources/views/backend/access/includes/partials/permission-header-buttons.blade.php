@@ -5,7 +5,7 @@
 <!--Action Button-->
 <div class="btn-group">
   <button type="button" class="btn btn-blue btn-flat dropdown-toggle" data-toggle="dropdown">Action
-    <span class="fas fa-fas fa-caret-down-down"></span>
+    <span class="fas fa-caret-down"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right" role="menu">
