@@ -25,7 +25,7 @@
                 <div class="form-group">
                     {{ Form::label('title', trans('validation.attributes.backend.pages.title'), ['class' => 'col-lg-2 control-label required']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('title', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.title'), 'required' => 'required']) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     {{ Form::label('description', trans('validation.attributes.backend.pages.description'), ['class' => 'col-lg-2 control-label required']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::textarea('description', null,['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.description')]) }}
                     </div><!--col-lg-3-->
                 </div><!--form control-->
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     {{ Form::label('cannonical_link', trans('validation.attributes.backend.pages.cannonical_link'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('cannonical_link', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.cannonical_link')]) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -49,7 +49,7 @@
                 <div class="form-group">
                     {{ Form::label('seo_title', trans('validation.attributes.backend.pages.seo_title'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('seo_title', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.seo_title')]) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     {{ Form::label('seo_keyword', trans('validation.attributes.backend.pages.seo_keyword'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::text('seo_keyword', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.seo_keyword')]) }}
                     </div><!--col-lg-10-->
                 </div><!--form control-->
@@ -65,13 +65,13 @@
                 <div class="form-group">
                     {{ Form::label('seo_description', trans('validation.attributes.backend.pages.seo_description'), ['class' => 'col-lg-2 control-label']) }}
 
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ Form::textarea('seo_description', null,['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.pages.seo_description')]) }}
                     </div><!--col-lg-3-->
                 </div><!--form control-->
 
                 <div class="form-group">
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         <div class="checkbox checkbox-info mb-2">
                                     <input  checked="checked" id="checkbox4" type="checkbox" id="status" name="status" value="1">
                                     <label for="checkbox4">
