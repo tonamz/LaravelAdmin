@@ -30,7 +30,7 @@
                 @if (config('locale.status') && count(config('locale.languages')) > 1)
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <i class="fa fa-language"></i> {{ trans('menus.language-picker.language') }} <span class="caret"></span>
+                            <i class="fa fa-language"></i> {{ trans('menus.language-picker.language') }} <span class="fas fa-caret-down"></span>
                         </a>
                         @include('includes.partials.lang')
                     </li>
@@ -42,7 +42,7 @@
                         <span class="label label-info">0</span>
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-right">
                         <li class="header">{{ trans_choice('strings.backend.general.you_have.messages', 0, ['number' => 0]) }}</li>
                         <li class="footer">
                             {{ link_to('#', trans('strings.backend.general.see_all.messages')) }}
@@ -56,7 +56,7 @@
                         <span class="label label-info notification-counter"></span>
                     </a>
 
-                    <ul class="dropdown-menu notification-menu-container">
+                    <ul class="dropdown-menu dropdown-menu-right notification-menu-container">
                     </ul>
                 </li><!-- /.notifications-menu -->
 
@@ -66,7 +66,7 @@
                         <span class="label label-info">0</span>
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-right">
                         <li class="header">{{ trans_choice('strings.backend.general.you_have.tasks', 0, ['number' => 0]) }}</li>
                         <li class="footer">
                             {{ link_to('#', trans('strings.backend.general.see_all.tasks')) }}

@@ -1,7 +1,5 @@
-@extends ('backend.layouts.app')
-
+@extends ('layouts.master')
 @section ('title', trans('labels.backend.access.users.management'))
-
 @section('page-header')
     <h1>
         {{ trans('labels.backend.access.users.management') }}
@@ -10,7 +8,7 @@
 @endsection
 
 @section('content')
-    <div class="box box-info">
+    <div class="card box box-info mt-2">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.users.active') }}</h3>
 
@@ -21,7 +19,7 @@
 
         <div class="box-body">
             <div class="table-responsive data-table-wrapper">
-                <table id="users-table" class="table table-condensed table-hover table-bordered">
+                <table id="users-table" class="w-100 mt-3 table table-condensed table-hover table-bordered">
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.access.users.table.first_name') }}</th>
@@ -63,17 +61,7 @@
         </div><!-- /.box-body -->
     </div><!--box-->
 
-    <!--<div class="box box-info">
-        <div class="box-header with-border">
-            <h3 class="box-title">{{ trans('history.backend.recent_history') }}</h3>
-            <div class="box-tools pull-right">
-                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            </div><!-- /.box tools -->
-        </div><!-- /.box-header -->
-        <div class="box-body">
-            {{-- {!! history()->renderType('User') !!} --}}
-        </div><!-- /.box-body -->
-    </div><!--box box-info-->
+   
 @endsection
 
 @section('after-scripts')

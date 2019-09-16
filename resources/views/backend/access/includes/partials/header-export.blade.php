@@ -1,10 +1,10 @@
 <!--Action Button-->
 <div class="btn-group">
   <button type="button" class="btn btn-warning btn-flat dropdown-toggle" data-toggle="dropdown">@lang('menus.backend.access.export')
-    <span class="caret"></span>
+    <span class="fas fa-caret-down"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-  <ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu dropdown-menu-right" role="menu">
     <li id="copyButton"><a href="#"><i class="fa fa-clone"></i> @lang('menus.backend.access.copy')</a></li>
     <li id="csvButton"><a href="#"><i class="fa fa-file-text-o"></i> CSV</a></li>
     <li id="excelButton"><a href="#"><i class="fa fa-file-excel-o"></i> Excel</a></li>

@@ -24,7 +24,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ trans('menus.language-picker.language') }}
-                            <span class="caret"></span>
+                            <span class="fas fa-caret-down"></span>
                         </a>
 
                         @include('includes.partials.lang')
@@ -44,10 +44,10 @@
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ $logged_in_user->name }} <span class="caret"></span>
+                            {{ $logged_in_user->name }} <span class="fas fa-caret-down"></span>
                         </a>
 
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu">
                             @permission('view-backend')
                                 <li>{{ link_to_route('admin.dashboard', trans('navs.frontend.user.administration')) }}</li>
                             @endauth

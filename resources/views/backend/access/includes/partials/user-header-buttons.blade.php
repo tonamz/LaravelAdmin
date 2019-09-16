@@ -5,10 +5,10 @@
 <!--Action Button-->
 <div class="btn-group">
   <button type="button" class="btn btn-primary btn-flat dropdown-toggle" data-toggle="dropdown">@lang('menus.backend.access.users.action')
-    <span class="caret"></span>
+    <span class="fas fa-caret-down"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
-  <ul class="dropdown-menu" role="menu">
+  <ul class="dropdown-menu dropdown-menu-right" role="menu">
     <li><a href="{{route('admin.access.user.index')}}"><i class="fa fa-list-ul"></i> @lang('menus.backend.access.users.list')</a></li>
     @permission('create-user')
     <li><a href="{{route('admin.access.user.create')}}"><i class="fa fa-plus"></i> @lang('menus.backend.access.users.add-new')</a></li>

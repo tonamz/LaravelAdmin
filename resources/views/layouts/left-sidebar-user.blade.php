@@ -8,7 +8,7 @@
             <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle avatar-md">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">Geneva Kennedy</a>
-                <div class="dropdown-menu user-pro-dropdown">
+                <div class="dropdown-menu dropdown-menu-right user-pro-dropdown">
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
