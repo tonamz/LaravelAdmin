@@ -1,4 +1,5 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
+
 
 @section ('title', trans('labels.backend.faqs.management') . ' | ' . trans('labels.backend.faqs.create'))
 
@@ -12,8 +13,8 @@
 @section('content')
     {{ Form::open(['route' => 'admin.faqs.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post', 'id' => 'create-faq']) }}
 
-        <div class="box box-info">
-            <div class="box-header with-border">
+        <div class="card box box-info">
+            <div class="box-header with-border ml-3">
                 <h3 class="box-title">{{ trans('labels.backend.faqs.create') }}</h3>
 
                 <div class="box-tools pull-right">
@@ -34,4 +35,8 @@
         </div><!--box-->
     </div>
     {{ Form::close() }}
+
+
 @endsection
+
+

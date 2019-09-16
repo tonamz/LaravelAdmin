@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.faqs.management') . ' | ' . trans('labels.backend.faqs.edit'))
 
@@ -12,9 +12,9 @@
 @section('content')
     {{ Form::model($faq, ['route' => ['admin.faqs.update', $faq], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'edit-faqs']) }}
 
-        <div class="box box-info">
+        <div class="card box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('labels.backend.faqs.edit') }}</h3>
+                <h3 class="box-title ml-3">{{ trans('labels.backend.faqs.edit') }}</h3>
 
                 <div class="box-tools pull-right">
                     @include('backend.faqs.partials.faqs-header-buttons')
