@@ -32,10 +32,10 @@ trait FaqAttribute
     public function getStatusLabelAttribute()
     {
         if ($this->isActive()) {
-            return "<label class='label label-success'>".trans('labels.general.active').'</label>';
+            return "<label class='badge badge-success'>".trans('labels.general.active').'</label>';
         }
 
-        return "<label class='label label-danger'>".trans('labels.general.inactive').'</label>';
+        return "<label class='badge badge-danger'>".trans('labels.general.inactive').'</label>';
     }
 
     /**
