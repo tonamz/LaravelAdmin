@@ -1,61 +1,87 @@
-@extends('frontend.layouts.app')
+@extends('layouts.master-without-nav')
+
+@section('body')
+<body class="bg-custom">
+@endsection
 
 @section('content')
 
-    <div class="row">
+        <div class="account-pages mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card ">
+                            <div class="card-body p-4">
+                                
+                                <div class="text-center w-75 m-auto">
+                                    <a href="index">
+                                        <span><img class="w-75" src="assets/images/company/logo.png" alt="" ></span>
+                                    </a>
+                                    <p class="text-muted mb-4 mt-3">Enter your email address and password to access admin panel.</p>
+                                </div>
 
-        <div class="col-md-8 col-md-offset-2">
+                                {{ Form::open(['route' => 'frontend.auth.login', 'class' => 'form-horizontal']) }}
 
-            <div class="panel panel-default">
-                <div class="panel-heading">{{ trans('labels.frontend.auth.login_box_title') }}</div>
+                                    <div class="form-group mb-3">
+                                        <label for="emailaddress">Email address</label>
+                                        {{ Form::input('email', 'email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.email')]) }}
+                                    </div>
 
-                <div class="panel-body">
+                                    <div class="form-group mb-3">
+                                        <label for="password">Password</label>
+                                        {{ Form::input('password', 'password', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.password')]) }}
+                                    </div>
 
-                    {{ Form::open(['route' => 'frontend.auth.login', 'class' => 'form-horizontal']) }}
+                                    <div class="form-group mb-3">
+                                        <div class="custom-checkbox">
+                                            {{ Form::checkbox('remember') }} {{ trans('labels.frontend.auth.remember_me') }}
+                                        </div>
+                                    </div>
 
-                    <div class="form-group">
-                        {{ Form::label('email', trans('validation.attributes.frontend.register-user.email'), ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('email', 'email', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.email')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group-->
+                                    <div class="form-group mb-0 text-center">
+                                        <!-- <button class="btn btn-primary btn-block" type="submit"> Log In </button> -->
+                                        {{ Form::submit(trans('labels.frontend.auth.login_button'), ['class' => 'bg-custom-dark btn  btn-block', 'style' => 'margin-right:15px']) }}
+                                    </div>
 
-                    <div class="form-group">
-                        {{ Form::label('password', trans('validation.attributes.frontend.register-user.password'), ['class' => 'col-md-4 control-label']) }}
-                        <div class="col-md-6">
-                            {{ Form::input('password', 'password', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.register-user.password')]) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group-->
+                                    {{ Form::close() }}
 
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                            <div class="checkbox">
-                                <label>
-                                    {{ Form::checkbox('remember') }} {{ trans('labels.frontend.auth.remember_me') }}
-                                </label>
-                            </div>
-                        </div><!--col-md-6-->
-                    </div><!--form-group-->
+                                    
+                                    <div id="app">
+                                        <div class="mt-3">
+                                            @include('includes.partials.messages')
+                                        </div> 
+                                    </div>
 
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-4">
-                            {{ Form::submit(trans('labels.frontend.auth.login_button'), ['class' => 'btn btn-primary', 'style' => 'margin-right:15px']) }}
+                            </div> <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
 
-                            {{ link_to_route('frontend.auth.password.reset', trans('labels.frontend.passwords.forgot_password')) }}
-                        </div><!--col-md-6-->
-                    </div><!--form-group-->
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <p> <a href="{{route('frontend.auth.password.reset')}}" class="text-white-50 ml-1">Forgot your password?</a></p>
+                                <p class="text-white-50">Don't have an account? <a  href="{{route('frontend.auth.register')}}" class="text-white ml-1"><b>Sign Up</b></a></p>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
 
-                    {{ Form::close() }}
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end page -->
+@endsection
+@section('after-scripts')
+    @if (config('access.captcha.registration'))
+        {!! Captcha::script() !!}
+    @endif
 
-                    <div class="row text-center">
+    <script type="text/javascript">
 
-                    </div>
-                </div><!-- panel body -->
-
-            </div><!-- panel -->
-
-        </div><!-- col-md-8 -->
-
-    </div><!-- row -->
-
+        $(document).ready(function() {
+            // To Use Select2
+            Backend.Select2.init();
+        });
+    </script>
 @endsection

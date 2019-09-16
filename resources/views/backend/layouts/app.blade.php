@@ -16,7 +16,7 @@
 
         <!-- Styles -->
         @yield('before-styles')
-
+        @include('layouts.head')
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
         @langrtl
@@ -50,7 +50,7 @@
         @include('includes.partials.logged-in-as')
 
         <div class="wrapper" id="app">
-            @include('backend.includes.header')
+
             @include('backend.includes.sidebar-dynamic')
 
             <!-- Content Wrapper. Contains page content -->

@@ -23,7 +23,7 @@
     <ul class="dropdown-menu" role="menu">
         <li>
             <a href="{{ route( 'admin.homes.index' ) }}">
-                <i class="fa fa-list-ul"></i> {{ trans( 'menus.backend.homes.all' ) }}
+                <i class="fa fa-list-ul"></i>  {{ trans( 'menus.backend.homes.all' ) }}
             </a>
         </li>
         @permission( 'create-home' )
