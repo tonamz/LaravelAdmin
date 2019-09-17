@@ -4,38 +4,37 @@
 
     
         
-        <li class="dropdown d-none d-lg-block">
+        <!-- <li class="dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                 Language
                 <i class="mdi mdi-chevron-down"></i> 
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item">
                     <i class="fas fa-bacon  mr-1"></i>
                     <span>Spanish</span>
                 </a>
             </div>
-        </li>
+        </li> -->
 
         
-        <li class="dropdown notification-list">
+        <!-- <li class="dropdown notification-list">
             <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                 <i class="fas fa-envelope  noti-icon"></i>
                 <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+            <div class="dropdown-menu dropdown-menu-right dropdown-lg"> -->
 
                 <!-- item-->
-                <div class="dropdown-item noti-title">
+                <!-- <div class="dropdown-item noti-title">
                     <h5 class="m-0">
                         <span class="float-right">
                         </span>{{ trans_choice('strings.backend.general.you_have.messages', 0, ['number' => 0]) }}
                     </h5>
-                </div>
+                </div> -->
 
                 <!-- All-->
-                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                <!-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                     {{ trans('strings.backend.general.see_all.messages') }}
                     <i class="fi-arrow-right"></i>
                 </a>
@@ -48,18 +47,18 @@
                 <i class=" fas fa-bell  noti-icon"></i>
                 <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+            <div class="dropdown-menu dropdown-menu-right dropdown-lg"> -->
 
                    <!-- item-->
-                <div class="dropdown-item noti-title">
+                <!-- <div class="dropdown-item noti-title">
                     <h5 class="m-0">
                         <span class="float-right">
                         </span>{{ trans_choice('strings.backend.general.you_have.messages', 0, ['number' => 0]) }}
                     </h5>
-                </div>
+                </div> -->
 
                 <!-- All-->
-                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                <!-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                     {{ trans('strings.backend.general.see_all.messages') }}
                     <i class="fi-arrow-right"></i>
                 </a>
@@ -72,25 +71,25 @@
                 <i class="fas fa-flag  noti-icon"></i>
                 <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+            <div class="dropdown-menu dropdown-menu-right dropdown-lg"> -->
 
                        <!-- item-->
-                <div class="dropdown-item noti-title">
+                <!-- <div class="dropdown-item noti-title">
                     <h5 class="m-0">
                         <span class="float-right">
                         </span>{{ trans_choice('strings.backend.general.you_have.tasks', 0, ['number' => 0]) }}
                     </h5>
-                </div>
+                </div> -->
 
                 <!-- All-->
-                <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                <!-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
                     {{ trans('strings.backend.general.see_all.tasks') }}
                     <i class="fi-arrow-right"></i>
                 </a>
             </div>
         </li>
 
-        
+         -->
         
 
         <li class="dropdown notification-list">
@@ -98,7 +97,7 @@
                 <!-- <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle"> -->
                 <img src="{{ access()->user()->picture }}" class="rounded-circle" alt="User Avatar"/>
                 <span class="pro-user-name ml-1">
-                    Geneva <i class="mdi mdi-chevron-down"></i> 
+                {{ access()->user()->first_name }}<i class="mdi mdi-chevron-down"></i> 
                 </span>
             </a>
             <div class="dropdown-menu dropdown-menu-right profile-dropdown ">

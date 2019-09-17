@@ -1,4 +1,4 @@
-@extends ('backend.layouts.app')
+@extends ('layouts.master')
 
 @section ('title', trans('labels.backend.access.users.management') . ' | ' . trans('labels.backend.access.users.edit'))
 
@@ -10,29 +10,28 @@
 
 @section('content')
 	{{ Form::model($logged_in_user, ['route' => 'admin.profile.update', 'class' => 'form-horizontal', 'method' => 'PATCH']) }}
-
-     <div class="box box-info">
+     <div class="card box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.users.edit-profile') }}</h3>
         </div>
         <div class="box-body">
             <div class="form-group">
                 {{ Form::label('first_name', trans('validation.attributes.frontend.register-user.firstName'), ['class' => 'col-lg-2 control-label']) }}
-                <div class="col-lg-10">
+                <div class="col-lg-12">
                     {{ Form::input('text', 'first_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.frontend.register-user.firstName')]) }}
                 </div>
             </div>
 
             <div class="form-group">
                 {{ Form::label('last_name', trans('validation.attributes.frontend.register-user.lastName'), ['class' => 'col-lg-2 control-label']) }}
-                <div class="col-lg-10">
+                <div class="col-lg-12">
                     {{ Form::input('text', 'last_name', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.frontend.register-user.firstName')]) }}
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-lg-10 col-md-offset-4">
-                    {{ Form::submit(trans('labels.general.buttons.update'), ['class' => 'btn btn-blue', 'id' => 'update-profile']) }}
+                    {{ Form::submit(trans('labels.general.buttons.update'), ['class' => 'btn btn-primary', 'id' => 'update-profile']) }}
                 </div>
             </div>
         </div>
