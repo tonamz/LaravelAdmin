@@ -42,12 +42,12 @@
                         <span> Module </span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="{{ route('admin.menus.index') }}">
                         <i class="fe-menu "></i>
                         <span> Menus </span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ route('admin.pages.index') }}">
                         <i class="fe-file "></i>
@@ -84,12 +84,7 @@
                         <span> Faq Management</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('admin.tests.index')}}">
-                        <i class="fas fa-question-circle "></i>
-                        <span> Test</span>
-                    </a>
-                </li>
+             
 
 
 
